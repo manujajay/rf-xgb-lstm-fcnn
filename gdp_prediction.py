@@ -116,7 +116,7 @@ lstm_model.add(LSTM(50, activation='relu', input_shape=(X_train_lstm.shape[1], X
 # Dense(1): Adds a fully connected layer with 1 output (for predicting GDP)
 lstm_model.add(Dense(1))
 # Compile the model using mean squared error (mse) as the loss function and adam optimizer
-lstm_model.compile(optimizer='adam', loss='mse')
+lstm_model.compile(optimizer='adam', loss='mse') # The ADAM optimizer is an improvement over the Stochastic Gradient Boosting algorithm (to find optimal parameters like w and b in the function that minimize the loss function - in this case the MSE function (which is the difference between actual and predicted values essentially)
 
 # Train the LSTM model on the training data
 # epochs=50: The number of complete passes through the training data
